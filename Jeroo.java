@@ -13,10 +13,12 @@ public class Jeroo extends JerooBase {
         if (isClear(AHEAD)) {
             hop();
         } 
-        if (isClear(AHEAD)) {
-            return false;
-        } else {
+        if (isFlower(AHEAD)) {
+            if (isNet(AHEAD)) {
             return true;
+            }
+        } else {
+            return false;
         }
     }
 
